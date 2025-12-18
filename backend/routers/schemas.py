@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from sqlalchemy import inspect
-from routers.connections import CONNECTIONS, build_engine
+from backend.routers.connections import CONNECTIONS, build_engine
 
 router = APIRouter(prefix="/schemas", tags=["Schemas"])
 

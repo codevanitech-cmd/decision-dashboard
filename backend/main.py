@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import health, connections, schemas, profiling
+from backend.routers import health, connections, schemas, profiling, table_profiling     
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -13,6 +13,7 @@ app.include_router(health.router)
 app.include_router(connections.router)
 app.include_router(schemas.router)
 app.include_router(profiling.router)
+app.include_router(table_profiling.router)
 
 @app.get("/")
 def root():
